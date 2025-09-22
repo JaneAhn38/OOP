@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// 사용자에게 10개의 정수들을 입력받아서 짝수와 홀수의 합과 개수 그리고 평균을 각각 출력하는 프로그램
+// 사용자에게 10개의 정수들을 입력받아서 짝수와 홀수의 합과 개수 그리고 평균을 각각 출력하시오.
 int main() {
     int num;
     int evenSum = 0, oddSum = 0;
