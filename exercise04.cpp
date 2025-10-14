@@ -1,3 +1,5 @@
+/*
+
 #include <iostream>
 #include <cmath>
 using namespace std;
@@ -70,3 +72,6 @@ int main() {
     cout << "Æò±Õ\t" << avgSub[0] << "\t" << avgSub[1] << "\t" << avgSub[2] << "\t" << avgSub[3] << "\n";
 	cout << "ºÐ»ê2\t" << var2Sub[0] << "\t" << var2Sub[1] << "\t" << var2Sub[2] << "\t" << var2Sub[3] << "\n";
 }
+
+
+*/
