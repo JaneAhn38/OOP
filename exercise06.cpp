@@ -9,7 +9,7 @@ public:
     double average;  // 학생의 평균
     double variance;  // 학생의 분산
 
-    void calculateAverage() {
+	void calculateAverage() { //평균 계산 함수를 추가
         int sum = 0;
         for (int i = 0; i < 4; i++) {
             sum += scores[i];
@@ -17,7 +17,7 @@ public:
         average = sum / 4.0;
     }
 
-    void calculateVariance() {
+	void calculateVariance() { //분산 계산 함수를 추가
         double varSum = 0;
         for (int i = 0; i < 4; i++) {
             varSum += (scores[i] - average) * (scores[i] - average);  // 분산 계산
