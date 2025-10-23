@@ -9,6 +9,13 @@ public:
 
 
 
+
+	//Get Set 메서드 작성하는 이유: 
+	// encapsulation(캡슐화) 
+	// - 멤버 변수를 보호하기 위해 private으로 설정하고, 
+	// public 메서드를 통해 접근하도록 함.
+	// 귀찮게 이렇게 하는 이유: 그래야 사용자의 무분별한 접근을 막아서 보안성을 높임.
+	//특징: Get 메서드는 값을 반환(int), Set 메서드는 값을 설정(void).
 	int GetCamera() {
 		return camera;
 	}
@@ -19,9 +26,63 @@ public:
 		}
 		if (pCamera < 400) {
 			camera = 400;
-			cout << " CAMERA can't be changed to  " << pCamera << endl;
+			cout << " CAMERA can't be changed to  " << pCamera << endl
+				<< "because it's out of range." << endl;
+			cout << "Therfore, CAMERA is now set to the minimum value 400." << endl;
+		}
+		if (pCamera > 600) {
+			camera = 600;
+			cout << " CAMERA can't be changed to  " << pCamera << endl
+				<< "because it's out of range." << endl;
+			cout << "Therfore, CAMERA is now set to the maximum value 600." << endl;
 		}
 	}
+
+	int GetBattery() {
+		return battery;
+	}	
+
+	void SetBattery(int pBattery) {
+		if ((pBattery >= 1000) && (pBattery <= 3000)) {
+			battery = pBattery;
+		}
+		if (pBattery < 1000) {
+			battery = 1000;
+			cout << " BATTERY can't be changed to  " << pBattery << endl
+				<< "because it's out of range." << endl;
+			cout << "Therfore, BATTERY is now set to the minimum value 1000." << endl;
+		}
+		if (pBattery > 3000) {
+			battery = 3000;
+			cout << " BATTERY can't be changed to  " << pBattery << endl
+				<< "because it's out of range." << endl;
+			cout << "Therfore, BATTERY is now set to the maximum value 3000." << endl;
+		}
+	}
+
+	int GetStorage() {
+		return storage;
+	}
+
+	void SetStorage(int pStorage) {
+		if ((pStorage >= 32) && (pStorage <= 64)) {
+			storage = pStorage;
+		}
+		if (pStorage < 32) {
+			storage = 32;
+			cout << " STORAGE can't be changed to  " << pStorage << endl
+				<< "because it's out of range." << endl;
+			cout << "Therfore, STORAGE is now set to the minimum value 32." << endl;
+		}
+		if (pStorage > 64) {
+			storage = 64;
+			cout << " STORAGE can't be changed to  " << pStorage << endl
+				<< "because it's out of range." << endl;
+			cout << "Therfore, STORAGE is now set to the maximum value 64." << endl;
+		}
+	}
+
+
 
 };
 
@@ -30,7 +91,15 @@ public:
 
 
 int main() {
+	// CellPhone 클래스의 객체 생성. 
+	// CellPhone 이라는 새롭게 생성된 자료형으로 myPhone 이라는 변수를 선언.
 	CellPhone myPhone;
+
+	myPhone.SetCamera(500);
+	myPhone.SetBattery(4000);
+	myPhone.SetStorage(64);
+
+	cout << en
 
 
 
